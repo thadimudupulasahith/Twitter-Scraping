@@ -23,8 +23,6 @@ The purpose of this Python script is to scrape Twitter data based on a user-spec
 ## Output
 The output of the code is a pandas DataFrame containing the scraped Twitter data. The DataFrame includes columns for the date, tweet ID, URL, tweet content, user, reply count, retweet count, language, source, and like count. The scraped data is also uploaded to a MongoDB Atlas cluster in the 'twitter_data' database and 'tweets' collection.
 
-## Limitations
-This code assumes that the user has a MongoDB Atlas cluster set up and that they have the necessary packages installed. The code also has a limit of 1000 tweets to scrape per search query.
 
 ## Acknowledgements
 This code was inspired by the following resources:
