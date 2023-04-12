@@ -5,7 +5,7 @@ from snscrape.modules import twitter
 import pymongo
 
 # Set up MongoDB client and database
-client = pymongo.MongoClient('mongodb://localhost:27017/')
+client = pymongo.MongoClient('mongodb+srv://thadimudupulasahith:sahith@cluster0.cy57gio.mongodb.net/?retryWrites=true&w=majority')
 db = client['twitter_data']
 collection = db['tweets']
 
