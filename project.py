@@ -61,7 +61,7 @@ tweet_count = st.number_input('Enter the maximum number of tweets to scrape:', m
 # These lines of code convert the start date and end date inputs to string format
 start_date_str = start_date.strftime('%Y-%m-%d')
 end_date_str = end_date.strftime('%Y-%m-%d')
-
+#The next line of code initializes an empty pandas DataFrame to hold the scraped data.
 data = pd.DataFrame()
 
 # Scrape Twitter data and display in table
@@ -70,12 +70,19 @@ if st.button('Scrape Data'):
     # Display message that the data is being scraped
     st.write(f'Scraping Twitter data for "{search_query}" from {start_date_str} to {end_date_str}...')
     # Scrape the data using the given parameters
+    #The next line of code calls the scrape_twitter_data function, passing in the search query, start date, end date,
+    #and tweet count as arguments.
+    #The returned DataFrame is stored in the data variable.
     data = scrape_twitter_data(search_query, start_date_str, end_date_str, tweet_count)
     # Display the number of tweets that were scraped
     st.write(f'{len(data)} tweets scraped:')
     # Display the scraped data in a table
     st.dataframe(data)
     # Upload data to MongoDB
+    # Add button to upload data to MongoDB
+    #if st.button('Upload to MongoDB'):
+    #upload_to_mongodb(data, keyword)
+    #st.write('Data uploaded to MongoDB.')
     upload_to_mongodb(data, search_query)
     # Display message that the data has been uploaded
     st.write('Data uploaded to MongoDB.')
