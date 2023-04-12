@@ -38,6 +38,8 @@ def scrape_twitter_data(search_query, start_date, end_date, tweet_count):
 # Define function to upload data to MongoDB
 # This function takes a pandas DataFrame and a search query as inputs
 # It uploads the DataFrame to the MongoDB Atlas cluster in the 'twitter_data' database and 'tweets' collection
+# data.to_dict()is a method call that converts a pandas DataFrame object called data into a list of dictionaries,
+#where each dictionary corresponds to a row in the DataFrame.
 def upload_to_mongodb(data, search_query):
     collection.insert_one({
         'Scraped Word': search_query,
