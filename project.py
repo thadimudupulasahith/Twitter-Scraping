@@ -6,7 +6,7 @@ import pymongo
 
 # Set up MongoDB client and database
 # Connect to the MongoDB Atlas cluster using the connection string
-uri = "mongodb://thadimudupulasahith:sahith@ac-hyktlgo-shard-00-00.cy57gio.mongodb.net:27017,ac-hyktlgo-shard-00-01.cy57gio.mongodb.net:27017,ac-hyktlgo-shard-00-02.cy57gio.mongodb.net:27017/?ssl=true&replicaSet=atlas-sfd55y-shard-0&authSource=admin&retryWrites=true&w=majority"
+uri = "mongodb+srv://thadimudupulasahith:sahith@cluster0.cy57gio.mongodb.net/?retryWrites=true&w=majority"
 client = pymongo.MongoClient(uri)
 # Access the 'twitter_data' database
 db = client['twitter_data']
