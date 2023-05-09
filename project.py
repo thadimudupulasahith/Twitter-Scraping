@@ -80,10 +80,10 @@ if st.button('Scrape Data'):
     st.dataframe(data)
     # Upload data to MongoDB
     # Add button to upload data to MongoDB
-    #if st.button('Upload to MongoDB'):
-    #upload_to_mongodb(data, keyword)
+    if st.button('Upload to MongoDB'):
+        upload_to_mongodb(data, keyword)
     #st.write('Data uploaded to MongoDB.')
-    upload_to_mongodb(data, search_query)
+    #upload_to_mongodb(data, search_query)
     # Display message that the data has been uploaded
     st.write('Data uploaded to MongoDB.')
 
