@@ -78,10 +78,10 @@ if st.button('Scrape Data'):
     st.write(f'{len(data)} tweets scraped:')
     # Display the scraped data in a table
     st.dataframe(data)
-    # Upload data to MongoDB
-    # Add button to upload data to MongoDB
-    if st.button('Upload to MongoDB'):
-        upload_to_mongodb(data, keyword)
+# Upload data to MongoDB
+# Add button to upload data to MongoDB
+if st.button('Upload to MongoDB'):
+    upload_to_mongodb(data, search_query)
     #st.write('Data uploaded to MongoDB.')
     #upload_to_mongodb(data, search_query)
     # Display message that the data has been uploaded
